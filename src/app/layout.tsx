@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ddstudio | 개발 그 이상의 파트너",
+  title: "ddstudio | 기술로 비즈니스를 완성합니다",
   description:
     "디디스튜디오는 외주 개발과 협력 개발을 전문으로 하는 소프트웨어 개발 스튜디오입니다.",
   icons: {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     apple: "/images/apple-touch-icon.png",
   },
   openGraph: {
-    title: "ddstudio | 개발 그 이상의 파트너",
+    title: "ddstudio | 기술로 비즈니스를 완성합니다",
     description:
       "디디스튜디오는 외주 개발과 협력 개발을 전문으로 하는 소프트웨어 개발 스튜디오입니다.",
     type: "website",

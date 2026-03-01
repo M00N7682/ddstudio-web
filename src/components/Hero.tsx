@@ -17,9 +17,11 @@ export default function Hero() {
             Software Development Studio
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6 opacity-0 animate-fade-in-up animate-delay-100">
-            개발 그 이상의
+            기술로
             <br />
-            파트너
+            비즈니스를
+            <br />
+            완성합니다
           </h1>
           <p className="text-base md:text-lg text-muted leading-relaxed mb-10 max-w-md opacity-0 animate-fade-in-up animate-delay-200">
             디디스튜디오는 당신의 아이디어를 현실로 만드는 소프트웨어 개발
