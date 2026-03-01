@@ -1,13 +1,18 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="border-t border-border py-12 px-6 md:px-12">
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div>
-            <p className="text-lg font-semibold tracking-tight mb-1">
-              ddstudio
-            </p>
-            <p className="text-sm text-muted">개발 그 이상의 파트너</p>
+            <Image
+              src="/images/logo-footer.png"
+              alt="ddstudio"
+              width={240}
+              height={80}
+              style={{ height: "80px", width: "auto" }}
+            />
           </div>
 
           <div className="flex items-center gap-6">

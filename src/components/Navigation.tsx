@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -28,11 +29,15 @@ export default function Navigation() {
       }`}
     >
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
-        <a
-          href="#"
-          className="text-lg font-semibold tracking-tight text-foreground"
-        >
-          ddstudio
+        <a href="#" className="flex items-center">
+          <Image
+            src="/images/logo-nav.png"
+            alt="ddstudio"
+            width={160}
+            height={32}
+            style={{ height: "32px", width: "auto" }}
+            priority
+          />
         </a>
 
         {/* Desktop */}
