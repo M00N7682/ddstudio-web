@@ -2,7 +2,7 @@ const translations = {
   ko: {
     hero: {
       subtitle: "Software Development Studio",
-      heading: ["기술로", "비즈니스를", "완성합니다"],
+      heading: ["완성이 아닌", "성공까지."],
       description:
         "디디스튜디오는 당신의 아이디어를 현실로 만드는 소프트웨어 개발 파트너입니다.",
       cta: "프로젝트 문의",
@@ -114,7 +114,7 @@ const translations = {
   en: {
     hero: {
       subtitle: "Software Development Studio",
-      heading: ["We Build", "Your Vision", "Into Reality"],
+      heading: ["Not Just Delivery,", "But Success."],
       description:
         "ddstudio is your software development partner that turns ideas into products.",
       cta: "Start a Project",

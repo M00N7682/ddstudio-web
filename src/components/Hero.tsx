@@ -28,8 +28,6 @@ export default function Hero() {
             {h.heading[0]}
             <br />
             {h.heading[1]}
-            <br />
-            {h.heading[2]}
           </h1>
           <p className="text-base md:text-lg text-muted leading-relaxed mb-10 max-w-md opacity-0 animate-fade-in-up animate-delay-200">
             {h.description}
