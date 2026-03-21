@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 
 const projects = [
@@ -16,6 +17,14 @@ const projects = [
       "LLM 기반 AI Agent 시스템을 설계하고 구축하여 업무 자동화와 생산성 향상을 실현했습니다.",
     tags: ["AI Agent", "LLM", "B2B"],
     image: "/images/portfolio/project-s.png",
+  },
+  {
+    category: "Web Development",
+    title: "Craftshop",
+    description:
+      "크래프트샵 웹사이트를 기획하고 구축하여 브랜드의 온라인 프레즌스를 강화했습니다.",
+    tags: ["Next.js", "TypeScript", "Web"],
+    image: "/images/portfolio/project-c.png",
   },
 ];
 
@@ -41,14 +50,17 @@ export default function Portfolio() {
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-6">
+        <div className="grid md:grid-cols-3 gap-6 mb-6">
           {projects.map((project, i) => (
             <ScrollReveal key={project.title} delay={i * 100}>
               <div className="group border border-border rounded-lg overflow-hidden hover:border-muted/50 transition-colors duration-300 h-full">
-                <div className="aspect-[16/10] bg-[#0a0a0a] flex items-center justify-center relative overflow-hidden">
-                  <span className="text-xs text-muted/50 font-mono">
-                    {project.image}
-                  </span>
+                <div className="aspect-[16/10] bg-[#0a0a0a] relative overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-6">
                   <p className="text-xs text-muted uppercase tracking-wider mb-2">
@@ -79,10 +91,13 @@ export default function Portfolio() {
         <ScrollReveal delay={200}>
           <div className="border border-border rounded-lg overflow-hidden hover:border-muted/50 transition-colors duration-300">
             <div className="grid md:grid-cols-2">
-              <div className="aspect-[16/10] md:aspect-auto bg-[#0a0a0a] flex items-center justify-center">
-                <span className="text-xs text-muted/50 font-mono">
-                  {product.image}
-                </span>
+              <div className="aspect-[16/10] md:aspect-auto bg-[#0a0a0a] relative overflow-hidden">
+                <Image
+                  src={product.image}
+                  alt={product.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-8 md:p-12 flex flex-col justify-center">
                 <p className="text-xs text-muted uppercase tracking-wider mb-2">
