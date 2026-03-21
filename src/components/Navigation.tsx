@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useLang } from "@/context/LanguageContext";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -13,6 +14,7 @@ const navLinks = [
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { lang, toggleLang } = useLang();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -51,33 +53,47 @@ export default function Navigation() {
               {link.label}
             </a>
           ))}
+          <button
+            onClick={toggleLang}
+            className="text-xs text-muted border border-border rounded-full px-3 py-1 hover:text-foreground hover:border-muted/50 transition-colors duration-200"
+          >
+            {lang === "ko" ? "EN" : "KO"}
+          </button>
         </div>
 
         {/* Mobile toggle */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-foreground p-2"
-          aria-label="Toggle menu"
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
+        <div className="flex md:hidden items-center gap-3">
+          <button
+            onClick={toggleLang}
+            className="text-xs text-muted border border-border rounded-full px-3 py-1 hover:text-foreground hover:border-muted/50 transition-colors duration-200"
           >
-            {menuOpen ? (
-              <path d="M4 4L16 16M16 4L4 16" />
-            ) : (
-              <>
-                <path d="M2 5H18" />
-                <path d="M2 10H18" />
-                <path d="M2 15H18" />
-              </>
-            )}
-          </svg>
-        </button>
+            {lang === "ko" ? "EN" : "KO"}
+          </button>
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-foreground p-2"
+            aria-label="Toggle menu"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+            >
+              {menuOpen ? (
+                <path d="M4 4L16 16M16 4L4 16" />
+              ) : (
+                <>
+                  <path d="M2 5H18" />
+                  <path d="M2 10H18" />
+                  <path d="M2 15H18" />
+                </>
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}

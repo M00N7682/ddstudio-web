@@ -1,4 +1,12 @@
+"use client";
+
+import { useLang } from "@/context/LanguageContext";
+import t from "@/lib/translations";
+
 export default function Hero() {
+  const { lang } = useLang();
+  const h = t[lang].hero;
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 md:px-12">
       {/* Subtle grid background */}
@@ -14,31 +22,30 @@ export default function Hero() {
       <div className="relative max-w-[1200px] w-full">
         <div className="max-w-2xl">
           <p className="text-sm text-muted tracking-widest uppercase mb-6 opacity-0 animate-fade-in-up">
-            Software Development Studio
+            {h.subtitle}
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6 opacity-0 animate-fade-in-up animate-delay-100">
-            기술로
+            {h.heading[0]}
             <br />
-            비즈니스를
+            {h.heading[1]}
             <br />
-            완성합니다
+            {h.heading[2]}
           </h1>
           <p className="text-base md:text-lg text-muted leading-relaxed mb-10 max-w-md opacity-0 animate-fade-in-up animate-delay-200">
-            디디스튜디오는 당신의 아이디어를 현실로 만드는 소프트웨어 개발
-            파트너입니다.
+            {h.description}
           </p>
           <div className="flex gap-4 opacity-0 animate-fade-in-up animate-delay-300">
             <a
               href="#contact"
               className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium bg-foreground text-background rounded-md hover:bg-foreground/90 transition-colors duration-200"
             >
-              프로젝트 문의
+              {h.cta}
             </a>
             <a
               href="#portfolio"
               className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium border border-border text-foreground rounded-md hover:bg-white/5 transition-colors duration-200"
             >
-              포트폴리오 보기
+              {h.portfolio}
             </a>
           </div>
         </div>

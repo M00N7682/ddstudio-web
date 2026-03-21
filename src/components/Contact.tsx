@@ -1,23 +1,27 @@
+"use client";
+
+import { useLang } from "@/context/LanguageContext";
+import t from "@/lib/translations";
 import ScrollReveal from "./ScrollReveal";
 
 export default function Contact() {
+  const { lang } = useLang();
+  const c = t[lang].contact;
+
   return (
     <section id="contact" className="py-32 px-6 md:px-12">
       <div className="max-w-[1200px] mx-auto">
         <div className="grid md:grid-cols-2 gap-16 md:gap-24">
           <ScrollReveal>
             <p className="text-sm text-muted tracking-widest uppercase mb-4">
-              Contact
+              {c.label}
             </p>
             <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-6">
-              프로젝트를
+              {c.heading[0]}
               <br />
-              시작해볼까요
+              {c.heading[1]}
             </h2>
-            <p className="text-muted leading-relaxed">
-              새로운 프로젝트나 협업에 대해 이야기 나누고 싶으시다면 편하게
-              연락주세요.
-            </p>
+            <p className="text-muted leading-relaxed">{c.description}</p>
           </ScrollReveal>
 
           <ScrollReveal delay={150}>
@@ -50,7 +54,7 @@ export default function Contact() {
                 <p className="text-xs text-muted uppercase tracking-wider mb-2">
                   Location
                 </p>
-                <p className="text-lg">서울시 관악구 봉천동 866-5</p>
+                <p className="text-lg">{c.location}</p>
               </div>
 
               <div>
