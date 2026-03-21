@@ -59,7 +59,7 @@ export default function Portfolio() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover"
+                    className="object-cover blur-[2px]"
                   />
                 </div>
                 <div className="p-6">
@@ -96,7 +96,7 @@ export default function Portfolio() {
                   src={product.image}
                   alt={product.title}
                   fill
-                  className="object-cover"
+                  className="object-cover blur-[2px]"
                 />
               </div>
               <div className="p-8 md:p-12 flex flex-col justify-center">
